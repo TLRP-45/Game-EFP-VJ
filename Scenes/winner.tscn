@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxag6rufiydyg"]
+
+[ext_resource type="Texture2D" uid="uid://dks6fy0y78xvh" path="res://Resources/winner.png" id="1_b1r65"]
+[ext_resource type="Script" path="res://Scripts/winner.gd" id="1_ephfi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7q8l8"]
+size = Vector2(120, 125)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_ephfi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -75)
+texture = ExtResource("1_b1r65")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -68.5)
+shape = SubResource("RectangleShape2D_7q8l8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, -181)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
