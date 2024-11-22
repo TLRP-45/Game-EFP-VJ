@@ -1,2 +1,9 @@
-res://Scenes/world.tscn
+res://Scenes/world_1.tscn
 res://Scenes/winner.tscn
+res://Scenes/world.tscn
+res://Scenes/world_2.tscn
+res://Scenes/world_3.tscn
+res://Scenes/world_4.tscn
+res://next_world.gd
+res://Scripts/end_world.gd
+res://Scenes/end_world.tscn

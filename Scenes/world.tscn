@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4nalgdr4emnm"]
+[gd_scene load_steps=7 format=3 uid="uid://c4nalgdr4emnm"]
 
 [ext_resource type="PackedScene" uid="uid://bxag6rufiydyg" path="res://Scenes/winner.tscn" id="1_mehc2"]
+[ext_resource type="PackedScene" uid="uid://bibiyur4h6m4o" path="res://Scenes/end_world.tscn" id="2_rkn11"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_706wb"]
 size = Vector2(1000, 50)
@@ -96,6 +97,9 @@ mesh = SubResource("QuadMesh_6nw3j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="static box3"]
 position = Vector2(68, 53)
 shape = SubResource("RectangleShape2D_trc7n")
+
+[node name="Area2D" parent="static box3" instance=ExtResource("2_rkn11")]
+position = Vector2(2193, -435)
 
 [node name="static box4" type="StaticBody2D" parent="."]
 position = Vector2(-320, 545)

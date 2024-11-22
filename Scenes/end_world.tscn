@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bibiyur4h6m4o"]
+
+[ext_resource type="Script" path="res://Scripts/end_world.gd" id="1_1yg05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nw7md"]
+size = Vector2(90, 79)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ha1jb"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_1yg05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_nw7md")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D"]
+modulate = Color(1, 1, 0.290196, 0.231373)
+position = Vector2(1.19209e-07, 0.999996)
+scale = Vector2(90, -81)
+mesh = SubResource("QuadMesh_ha1jb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
