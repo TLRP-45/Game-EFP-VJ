@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bka26mb8hlh7a"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_dgnlg"]
+[ext_resource type="Texture2D" uid="uid://dks6fy0y78xvh" path="res://Resources/winner.png" id="2_nveh2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udyln"]
+size = Vector2(233, 245)
+
+[node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_dgnlg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.5, 11.5)
+shape = SubResource("RectangleShape2D_udyln")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 4)
+scale = Vector2(1.80556, 1.78867)
+texture = ExtResource("2_nveh2")
+
+[node name="rayo" type="Node2D" parent="."]
+visible = false
+
+[node name="rayo1" type="RayCast2D" parent="rayo"]
+target_position = Vector2(60, 0)
+
+[node name="rayo2" type="RayCast2D" parent="rayo"]
+target_position = Vector2(-60, 0)
