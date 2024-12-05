@@ -39,6 +39,7 @@ position = Vector2(3, 3)
 
 [node name="player" parent="." instance=ExtResource("1_0t5nh")]
 position = Vector2(-299, -8)
+JUMP_VELOCITY = -600.0
 
 [node name="Platform" type="StaticBody2D" parent="."]
 position = Vector2(-1, 30)
@@ -170,7 +171,7 @@ position = Vector2(843, -565)
 shape = SubResource("RectangleShape2D_ild0k")
 
 [node name="Platform6" type="StaticBody2D" parent="."]
-position = Vector2(170, -546)
+position = Vector2(163, -510)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform6"]
 modulate = Color(0.705882, 0.443137, 0.396078, 1)
@@ -206,7 +207,7 @@ position = Vector2(-200, 257)
 shape = SubResource("RectangleShape2D_hy0rg")
 
 [node name="static box5" type="StaticBody2D" parent="."]
-position = Vector2(2067, -496)
+position = Vector2(2067, -456)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="static box5"]
 modulate = Color(0.6, 0.576471, 0.298039, 1)

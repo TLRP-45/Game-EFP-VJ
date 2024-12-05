@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dks6fy0y78xvh" path="res://Resources/winner.png" id="2_nveh2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udyln"]
-size = Vector2(233, 245)
+size = Vector2(207, 201)
 
 [node name="enemy" type="CharacterBody2D"]
 script = ExtResource("1_dgnlg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.5, 11.5)
+position = Vector2(6.5, 9.5)
 shape = SubResource("RectangleShape2D_udyln")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
