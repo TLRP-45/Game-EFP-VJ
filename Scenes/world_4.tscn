@@ -1,9 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://dc5ihi15awjx"]
+[gd_scene load_steps=7 format=3 uid="uid://dc5ihi15awjx"]
 
+[ext_resource type="Texture2D" uid="uid://b48sl3jfjqq5v" path="res://Resources/pixel-art-8bit-you-win-260nw-1701958024.webp" id="1_5u516"]
 [ext_resource type="PackedScene" uid="uid://bxag6rufiydyg" path="res://Scenes/winner.tscn" id="1_mu464"]
 
+[sub_resource type="QuadMesh" id="QuadMesh_g2d0r"]
+size = Vector2(1000, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cndk7"]
+size = Vector2(1261.5, 50)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ijqok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrfnk"]
+size = Vector2(50, 2309)
+
 [node name="world_4" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-986, 198)
+scale = Vector2(4.85, 3.11786)
+texture = ExtResource("1_5u516")
 
 [node name="player" parent="." instance=ExtResource("1_mu464")]
 position = Vector2(-996, 265)
 WORLD = 4
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(-1, 30)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
+modulate = Color(0.705882, 0.443137, 0.396078, 1)
+position = Vector2(-985.25, 573.5)
+scale = Vector2(1.2605, 1.22)
+mesh = SubResource("QuadMesh_g2d0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(-985.75, 568)
+shape = SubResource("RectangleShape2D_cndk7")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(-1668, -254)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Wall2"]
+modulate = Color(0.419608, 0.32549, 0.411765, 1)
+position = Vector2(24.75, 788.5)
+scale = Vector2(50.5, 2309)
+mesh = SubResource("QuadMesh_ijqok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(25, 788)
+shape = SubResource("RectangleShape2D_lrfnk")
+
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2(-352, -250)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Wall3"]
+modulate = Color(0.419608, 0.32549, 0.411765, 1)
+position = Vector2(24.75, 788.5)
+scale = Vector2(50.5, 2309)
+mesh = SubResource("QuadMesh_ijqok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
+position = Vector2(25, 788)
+shape = SubResource("RectangleShape2D_lrfnk")
